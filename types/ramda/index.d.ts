@@ -1691,6 +1691,7 @@ export function scan<T, TResult>(fn: (acc: TResult, elem: T) => any): (acc: TRes
 export function set<T, U>(lens: Lens, a: U, obj: T): T;
 export function set<U>(lens: Lens, a: U): <T>(obj: T) => T;
 export function set(lens: Lens): <T, U>(a: U, obj: T) => T;
+export function set(lens: Lens): <U>(a: U) => <T>(obj: T) => T;
 
 /**
  * Returns the elements from `xs` starting at `a` and ending at `b - 1`.
